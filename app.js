@@ -10,6 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use('/public' , express.static('public'));
 
+var port = process.env.PORT || 2100;
 
 const blog = require('./model/post');
 
@@ -82,4 +83,4 @@ app.post('/compose' , (req,res)=>{
 
 
 
-app.listen(2200);
+app.listen(port);
